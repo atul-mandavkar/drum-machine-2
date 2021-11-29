@@ -1,0 +1,14 @@
+.drumButton{
+  width: 90%;
+  height: 90%;
+  border: 1px solid green;
+  background-color: springgreen;
+  box-shadow: 2px 2px green;
+  margin: auto;
+  font-size: 300%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  text-shadow: 2px 2px rgb(1, 73, 1);
+}

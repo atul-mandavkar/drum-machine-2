@@ -1,0 +1,5 @@
+.displayBox{
+  background-color: salmon;
+  width: 50%;
+  flex: 1;
+}

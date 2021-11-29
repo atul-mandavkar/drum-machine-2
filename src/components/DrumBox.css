@@ -1,0 +1,9 @@
+.drumBox{
+  background-color: rosybrown;
+  width: 50%;
+  border: 1px solid black;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
