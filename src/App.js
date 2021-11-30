@@ -3,6 +3,7 @@ import DrumBox from "./components/DrumBox";
 import DisplayBox from "./components/DisplayBox";
 import DrumButton from "./components/DrumButton";
 import SoundClip from "./components/SoundClip";
+import PowerButton from "./components/PowerButton";
 
 
 const App = () => {
@@ -52,7 +53,9 @@ const App = () => {
           })
         }
       </DrumBox>
-      <DisplayBox></DisplayBox>
+      <DisplayBox>
+        <PowerButton/>
+      </DisplayBox>
     </Wrapper>
   );
 }
