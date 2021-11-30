@@ -3,8 +3,10 @@ import "./DrumButton.css";
 
 
 
-const DrumButton = ({value}) =>{
-  return <div className="drumButton">{value}</div>
+const DrumButton = ({value, onClick, children}) =>{
+  return <div className="drumButton" onClick={onClick}>{value}
+            {children}
+         </div>
 };
 
 
