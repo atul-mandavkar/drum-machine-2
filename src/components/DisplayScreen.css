@@ -1,0 +1,12 @@
+.displayScreen{
+  width: 70%;
+  height: 50%;
+  background-color: blue;
+  box-shadow: 2px 2px rgb(2, 2, 71), -2px 2px rgb(2, 2, 71), 2px -2px rgb(2, 2, 71),-2px -2px rgb(2, 2, 71);
+  margin: auto;
+  font-size: 250%;
+  color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

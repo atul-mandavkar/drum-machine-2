@@ -5,6 +5,8 @@ import DisplayBox from "./components/DisplayBox";
 import DrumButton from "./components/DrumButton";
 import SoundClip from "./components/SoundClip";
 import PowerButton from "./components/PowerButton";
+import DisplayScreen from "./components/DisplayScreen";
+import SoundButton from "./components/SoundButton";
 
 
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
   });
   const powerChange = () => {
     const p1 = document.getElementById("powerIcon");
+    // To make screen content invisible
+    document.getElementsByClassName("displayScreen")[0].innerHTML="";
     if(res.powVal < 0){
       console.log("on");
       p1.style.color="aqua";
@@ -26,22 +30,70 @@ const App = () => {
       powVal: res.powVal * -1
     });
   }
+  const soundChange = () =>{
+    console.log(document.getElementsByClassName("soundButton")[0].value);
+    // The volume is starting from 0.1 to 1 so
+    let v2 = document.getElementsByClassName("soundButton")[0].value * 0.1; 
+    const aud = document.querySelectorAll("audio");
+    for(let i = 0; i < aud.length; i++){
+      aud[i].volume=v2;
+    }
+  }
 
   const playQ = () => {
-    console.log("play Q");
-    console.log(document.getElementsByClassName("soundClip")[0]);
-    if(res.powVal == 1){
+    if(res.powVal === 1){
       document.getElementsByClassName("soundClip")[0].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[0].innerHTML;
     }
   };
-  const playW = () => {console.log("play W");};
-  const playE = () => {console.log("play E");};
-  const playA = () => {console.log("play A");};
-  const playS = () => {console.log("play S");};
-  const playD = () => {console.log("play D");};
-  const playZ = () => {console.log("play Z");};
-  const playX = () => {console.log("play X");};
-  const playC = () => {console.log("play C");};
+  const playW = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[1].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[1].innerHTML;
+    }
+  };
+  const playE = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[2].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[2].innerHTML;
+    }
+  };
+  const playA = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[3].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[3].innerHTML;
+    }
+  };
+  const playS = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[4].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[4].innerHTML;
+    }
+  };
+  const playD = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[5].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[5].innerHTML;
+    }
+  };
+  const playZ = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[6].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[6].innerHTML;
+    }
+  };
+  const playX = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[7].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[7].innerHTML;
+    }
+  };
+  const playC = () => {
+    if(res.powVal === 1){
+      document.getElementsByClassName("soundClip")[8].play();
+      document.getElementsByClassName("displayScreen")[0].innerHTML=document.getElementsByClassName("soundClip")[8].innerHTML;
+    }
+  };
 
   const buttonNames = [
     [
@@ -77,6 +129,8 @@ const App = () => {
       </DrumBox>
       <DisplayBox>
         <PowerButton onClick={powerChange} />
+        <DisplayScreen />
+        <SoundButton onChange={soundChange} />
       </DisplayBox>
     </Wrapper>
   );
