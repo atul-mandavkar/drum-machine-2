@@ -5,21 +5,38 @@
   text-align: center;
   position: relative;
 }
+#powerIcon{
+  width: 20%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: blue;
+  border: 1px solid rgb(173, 21, 4);
+  font-size: 400%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  color: salmon;
+  text-shadow: 2px 2px rgb(70, 70, 255), -2px 2px rgb(70, 70, 255), 2px -2px rgb(70, 70, 255), -2px -2px rgb(70, 70, 255); 
+}
 input[type="checkbox"]{
   width: 20%;
   height: 50%;
   border-radius: 50%;
   appearance: none;
-  background-color: rgb(150, 150, 245);
-  border: 1PX solid blue;
-}
-input[type="checkbox"]::after{
+  background-color: transparent;
+  border: 1px solid rgb(136, 70, 62);
   position: absolute;
-  content: "";
-  width: 15%;
-  height: 40%;
+  left: 39.5%;
+}
+input[type="checkbox"]:checked{
+  width: 20%;
+  height: 50%;
   border-radius: 50%;
-  background-color: blue;
-  top: 35.5%;
-  left: 42.5%;
+  appearance: none;
+  background-color: transparent;
+  border: 7px solid aqua;
+  transform: scale(1.1);
 }

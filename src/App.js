@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import Wrapper from "./components/Wrapper";
 import DrumBox from "./components/DrumBox";
 import DisplayBox from "./components/DisplayBox";
@@ -7,10 +8,31 @@ import PowerButton from "./components/PowerButton";
 
 
 const App = () => {
+  let [res, setRes] = useState({
+    powVal: -1
+  });
+  const powerChange = () => {
+    const p1 = document.getElementById("powerIcon");
+    if(res.powVal < 0){
+      console.log("on");
+      p1.style.color="aqua";
+    }
+    else{
+      console.log("off");
+      p1.style.color="salmon";
+    }
+    setRes({
+      ...res,
+      powVal: res.powVal * -1
+    });
+  }
+
   const playQ = () => {
     console.log("play Q");
     console.log(document.getElementsByClassName("soundClip")[0]);
-    document.getElementsByClassName("soundClip")[0].play();
+    if(res.powVal == 1){
+      document.getElementsByClassName("soundClip")[0].play();
+    }
   };
   const playW = () => {console.log("play W");};
   const playE = () => {console.log("play E");};
@@ -54,7 +76,7 @@ const App = () => {
         }
       </DrumBox>
       <DisplayBox>
-        <PowerButton/>
+        <PowerButton onClick={powerChange} />
       </DisplayBox>
     </Wrapper>
   );
