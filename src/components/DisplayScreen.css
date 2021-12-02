@@ -10,3 +10,10 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 600px) {
+  .displayScreen{
+    width: 90%;
+    box-shadow: none;
+    font-size: 24px;
+  } 
+}

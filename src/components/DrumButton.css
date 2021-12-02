@@ -12,3 +12,9 @@
   color: aliceblue;
   text-shadow: 2px 2px rgb(1, 73, 1);
 }
+
+@media screen and (max-width: 600px) {
+  .drumButton{
+    font-size: 100%;
+  } 
+}
