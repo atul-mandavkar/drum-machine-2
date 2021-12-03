@@ -5,9 +5,12 @@
   text-align: center;
   position: relative;
 }
+.powerContainer > h3{
+  position: relative;
+}
 #powerIcon{
-  width: 20%;
-  height: 50%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: blue;
   border: 1px solid rgb(173, 21, 4);
@@ -22,43 +25,51 @@
   text-shadow: 2px 2px rgb(70, 70, 255), -2px 2px rgb(70, 70, 255), 2px -2px rgb(70, 70, 255), -2px -2px rgb(70, 70, 255); 
 }
 input[type="checkbox"]{
-  width: 20%;
-  height: 50%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   appearance: none;
   background-color: transparent;
-  border: 1px solid rgb(136, 70, 62);
+  border: 7px solid salmon;
   position: absolute;
+  top: 29%;
   left: 39.5%;
 }
 input[type="checkbox"]:checked{
-  width: 20%;
-  height: 50%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   appearance: none;
   background-color: transparent;
   border: 7px solid aqua;
   transform: scale(1.1);
+  position: absolute;
+  top: 30%;
+  left: 40%;
 }
 
 @media screen and (max-width: 600px) {
   #powerIcon{
     width: 60px;
     height: 60px;
-    top: 60px;
+    top: 23.1%;
+    left: 40.8%;
     font-size: 24px;
     text-shadow: none;
   }
   input[type="checkbox"]{
     width: 60px;
     height: 60px;
-    left: 38.5%;
+    border: 2px solid salmon;
+    top: 22%;
+    left: 39%;
   }
   input[type="checkbox"]:checked{
     width: 60px;
     height: 60px;
     border: 2px solid aqua;
     transform: scale(1.1);
-    top: 57px;
+    top: 22%;
+    left: 39%;
   }
 }
